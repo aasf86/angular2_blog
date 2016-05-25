@@ -1,0 +1,24 @@
+{
+  "name": "angular2_blog",
+  "version": "1.0.0",
+  "description": "angular2_blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aasf86/angular2_blog/"
+  },
+  "author": "aasf86",
+  "license": "ISC",
+  "dependencies": {
+    "angular2": "^2.0.0-beta.17",
+    "body-parser": "^1.15.1",
+    "bootstrap": "^3.3.6",
+    "express": "^4.13.4",
+    "jsonwebtoken": "^7.0.0",
+    "mongoose": "^4.4.19",
+    "systemjs": "^0.19.29"
+  }
+}
