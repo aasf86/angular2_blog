@@ -8,7 +8,9 @@ var secretKey = "MySuperSecretKey";
 
 //Database in the cloud
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://aasf86:123456Mlab@ds015713.mlab.com:15713/learning_angular2', function (err) {
+//mongoose.connect('mongodb://aasf86:123456Mlab@ds015713.mlab.com:15713/learning_angular2', function (err) {
+//mongoose.connect('mongodb://127.0.0.1:27017/learning_angular2', function (err) {    
+mongoose.connect('mongodb://127.0.0.1:27017/learning_angular2', function (err) {    
     if (err) { console.error("erro na conexão! " + err) }
 });
 
@@ -165,5 +167,4 @@ app.use('/api', router);
 //start server
 var port = process.env.PORT || 8181;
 app.listen(port);
-console.log('Listen: ' + port);
-    
+console.log('Listen: ' + port);  
