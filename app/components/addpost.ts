@@ -39,18 +39,18 @@ export class AddPostComponent {
     private errorMessage:string = null;
     private showLoading:boolean = false;
     constructor(private _loginService:LoginService, private _router:Router, private _postService:PostService) {
-            if (!_loginService.isLogged())
-                this._router.navigate( ['Login'] );
-            this.post.user = this._loginService.getUser();
-        }
-        onClick(event){
-            event.preventDefault();
-            this.showLoading = true;
-            this.errorMessage = null;
-            this._postService.insert(this.post).subscribe(
-                result => this.onInsertPostResult(result),
-                error => this.onInsertPostError(error)
-            );
+        if (!_loginService.isLogged())
+            this._router.navigate( ['Login'] );
+        this.post.user = this._loginService.getUser();
+    }
+    onClick(event){
+        event.preventDefault();
+        this.showLoading = true;
+        this.errorMessage = null;
+        this._postService.insert(this.post).subscribe(
+            result => this.onInsertPostResult(result),
+            error => this.onInsertPostError(error)
+        );
     }
     onInsertPostResult(result){
         this._router.navigate( ['Home'] );

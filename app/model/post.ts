@@ -4,6 +4,7 @@ export class Post{
     public title: string;
     public user: User;
     public body: string;
+    public text: string;
     public date: Date
     constructor(){}
 }

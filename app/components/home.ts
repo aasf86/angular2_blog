@@ -34,7 +34,7 @@ export class HomeComponent {
             p => this.onLoadAllPostsResult(p),
             err => console.log(err));
     }
-    onLoadAllPostsResult(p){
+    onLoadAllPostsResult(p){        
         this.posts = p;
         this.showLoading = false;
     }
